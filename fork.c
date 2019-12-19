@@ -21,3 +21,7 @@ int main(){
                 exit(0);
         }
 }
+/*
+        等 2s
+        second child,parent pid = 1
+*/
