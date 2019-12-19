@@ -1,0 +1,32 @@
+http://www.cnblogs.com/ringwang/p/3528093.html
+http://www.jb51.net/article/60741.htm
+
+文件锁：阻塞与非阻塞
+	进程去获取文件锁，如果文件已上锁，则该进程会阻塞，直到获取到文件锁
+
+结构体变量初始化：初始化到全局空间 和 初始化到堆空间区别 
+
+创建子进程后，父进程 必须 waitpid（）否则 
+
+execve() 用法： 执行程序 没有参数 ，不能传""
+
+fork()与 execve() 区别？
+通过c代码运行终端命令的方法：
+system（）与 execve()区别？
+http://blog.csdn.net/i792439187/article/details/8826745
+
+宏定义中 # 和 ## 作用？
+
+僵尸进程
+
+linux 下两个特殊文件 /dev/null /dev/zero 怎么使用？
+http://blog.csdn.net/pi9nc/article/details/18257593
+
+重定向 dup()/dup2()使用
+http://blog.csdn.net/lurendetiankong/article/details/53487206
+http://eriol.iteye.com/blog/1180624
+http://blog.csdn.net/kangear/article/details/24534707
+
+
+waitpid()用法：
+http://blog.csdn.net/wallwind/article/details/6998602
