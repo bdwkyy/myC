@@ -65,7 +65,8 @@ int check_running(void)
 {
 	int fd;
 	char buf[16];
-	fd = open(LOCKFILE,O_RDWR|O_CREAT,LOCKMODE);
+	//fd = open(LOCKFILE,O_RDWR|O_CREAT,LOCKMODE);
+	fd = open(LOCKFILE,O_RDWR,LOCKMODE);
 	if(fd < 0){
 		printf("can't open %s\n",LOCKFILE);
 		return 1;
@@ -75,6 +76,7 @@ int check_running(void)
 			printf("can't lock1 %s\n",LOCKFILE);
 			return 1;
 	}
+	close(fd);
 	return 0;
 }
 /*
@@ -109,7 +111,7 @@ void main()
 		{
 			return;
 		}
-            if(!check_running())
+            if(check_running() == 0)
             {
 				printf("pocsig2-2 not running\n");
 				int pid;
