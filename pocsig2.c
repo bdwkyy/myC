@@ -282,11 +282,6 @@ if(pid<0)
 else if(pid>0) 
     exit(0);	
 setsid(); 
-pid=fork();
-if(pid>0)
-    exit(0); 
-else if(pid<0)
-    exit(1);
 
 for(i=0;i<NOFILE;i++)
     close(i);
@@ -313,6 +308,7 @@ int check_running()
 			close(fd);
 			return POC_ERR;
 	}
+	close(fd);
 	return POC_OK;
 }
 
